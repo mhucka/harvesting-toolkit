@@ -39,7 +39,7 @@ If there is harvestable data, the next set up a directory (step three), and then
 Before starting it's best to get a directory going for the data you're going to archive. You will be in charge of creating & collecting this structure for each link that's deemed uncrawlable. Using the example from step 1, the structure of the archive will look like so:
 
 	DAFD2E80-965F-4989-8A77-843DE716D899
-		├── DAFD2E80-965F-4989-8A77-843DE716D899.warc.gz
+		├── DAFD2E80-965F-4989-8A77-843DE716D899.html
 		├── DAFD2E80-965F-4989-8A77-843DE716D899.json
 		├── /tools
 		└── /data
@@ -47,7 +47,7 @@ Before starting it's best to get a directory going for the data you're going to 
 Each row in the above is:
 
 	A directory named by the spreadsheet id
-		├── a .warc "web archive" file of the url for future reference, named with the id
+		├── a .html "web archive" file of the url for future reference, named with the id
 		├── a .json metadata file that contains relevant metadata, named with the id
 		├── a /tools directory to include any scripts, notes & files used to acquire the data
 		└── a /data directory that contains the data in question
@@ -55,8 +55,12 @@ Each row in the above is:
 
 The goal is to pass this finalized folder off for "bagging", as described elsewhere. We repeatedly use the ID so that we can programmatically work through this data later. It is important that the ID be copied *exactly*, with no leading or trailing spaces, and honoring case-sensitivity.
 
-#### [id].warc.gz file
-The first thing you'll want to create is a .warc webarchive file. The .warc file gives the archive a snapshot of the page at the time of archiving which we can use to monitor for changing data in the future, and corrobrate the provenance of the archive itself. We can also (theoretically) use the .warc in conjunction with the scripts you'll include in the tools directory to replicate the archive in the future. Instructions & help for creating a .warc.gz file are included in [/tools/generate-warc][/tools/generate-warc].
+#### [id].html file
+The first thing you'll want to create is a html copy of the page in question. The html file gives the archive a snapshot of the page at the time of archiving which we can use to monitor for changing data in the future, and corrobrate the provenance of the archive itself. We can also use the .html in conjunction with the scripts you'll include in the tools directory to replicate the archive in the future. To generate the html file, navigate to your new folder in a terminal window & run the following command:
+	
+	wget -O DAFD2E80-965F-4989-8A77-843DE716D899.html  http://www.eia.gov/electricity/data/eia412/
+
+You'll replace ```DAFD2E80-965F-4989-8A77-843DE716D899.html``` with the id + .html, and the url with the one you're looking at.
 
 #### [id].json file
 The json file is one you'll create by hand to create a machine readable record of the archive. This file contains vital data, including the url that was archived, and date of archiving. the [id.json readme][/docs/id-json.md] goes into much more detail.
@@ -73,7 +77,6 @@ have a look download_ftp_tree.py, there's example usage & stuff in the file.
 
 ### 4c. API scrape / Custom Solution
 if you encounter an api, chances are you'll have to build some sort of custom solution, or investigate a social angle, for example: asking someone with greater access for a database dump.
-
 
 ### 5. Write [id].json metadata, add /tools
 From there you'll want to fill out the metadata.json, copy any scripts & tools you used into the /tools directory. It may seem strange to copy code multiple times, but this can help later to reconstruct the archiving process for further refinment later on.
