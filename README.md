@@ -32,7 +32,7 @@ Before you go any further, it is *always* worth confirming that the data in ques
 
 **Data acquired outside terms of service is not usable**
 
-If there is harvestable data, the next set up a directory (step three), and then choose the appropriate strategy for archiving!
+If there is harvestable data, the next step is to set up a directory (step three), and then choose the appropriate strategy for archiving!
 
 ## 3. Generate Html, json & Directory
 
