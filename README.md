@@ -19,7 +19,7 @@ To checkout a url, add your name (or even better, slack username) to the row you
 Before doing anything, take a minute to understand what you're looking at. It's usually best to have a quick check of the url to confirm that this data in fact not crawlable. Often as part of the harvesting team, you'll be the first person with a higher level of technical knowledge to review the url in question.
 
 #### Check for false-positives (content that is in fact crawlable).
-Generally, any url that returns standard HTML, links to more [HTML mimetype pages][https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types], and contains little-to-no non-html content, it's crawlable. "View source" from your browser of choice will help see what the crawler itself is seeing. If in fact the data can be crawled, make a note as such in the Google sheet, remove your name from the "checkout" column, notify the seeding / crawling team & they will make sure the link is crawled, and move on to another url.
+Generally, any url that returns standard HTML, links to more [HTML mimetype pages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), and contains little-to-no non-html content, it's crawlable. "View source" from your browser of choice will help see what the crawler itself is seeing. If in fact the data can be crawled, make a note as such in the Google sheet, remove your name from the "checkout" column, notify the seeding / crawling team & they will make sure the link is crawled, and move on to another url.
 
 #### Some things to think about while reviewing a url
 * Does this page use javascript to render its content? Crawlers generally cannot parse dynamically-generated content.
