@@ -68,7 +68,7 @@ The json file is one you'll create by hand to create a machine readable record o
 ### 4a. Identify Data Links & WGET loop with sleep
 If you encounter a page that links to lots of data (for example a "downloads" page), this approach may well work. It's important to know Only use this approach when you encounter *data*, for example pdf's, .zip archives, .csv datasets, etc.
 
-The tricky part of this approach is generating a list of urls to download from the page. If you're skilled with using scripts in combination with html-parsers (for example python's wonderful [beautiful-soup package][https://www.crummy.com/software/BeautifulSoup/bs4/doc/#quick-start]), go for it. Otherwise, we've included the [jquery-url-extraction guide][/tools/jquery-url-extraction], which has the advantage of working within a browser & can operate on a page that has been modified by javascript.
+The tricky part of this approach is generating a list of urls to download from the page. If you're skilled with using scripts in combination with html-parsers (for example python's wonderful [beautiful-soup package](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#quick-start)), go for it. Otherwise, we've included the [jquery-url-extraction guide][/tools/jquery-url-extraction], which has the advantage of working within a browser & can operate on a page that has been modified by javascript.
 
 The example uses this approach, leveraging the jquery-url extraction method to generate a list of urls to feed the wget loop.
 
