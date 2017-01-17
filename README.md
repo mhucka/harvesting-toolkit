@@ -34,7 +34,7 @@ Before you go any further, it is *always* worth confirming that the data in ques
 
 If there is harvestable data, the next set up a directory (step three), and then choose the appropriate strategy for archiving!
 
-## 3. Generate WARC File & Directory
+## 3. Generate Html, json & Directory
 
 Before starting it's best to get a directory going for the data you're going to archive. You will be in charge of creating & collecting this structure for each link that's deemed uncrawlable. Using the example from step 1, the structure of the archive will look like so:
 
