@@ -63,7 +63,7 @@ The first thing you'll want to create is a html copy of the page in question. Th
 You'll replace ```DAFD2E80-965F-4989-8A77-843DE716D899.html``` with the id + .html, and the url with the one you're looking at.
 
 #### [id].json file
-The json file is one you'll create by hand to create a machine readable record of the archive. This file contains vital data, including the url that was archived, and date of archiving. the [id.json readme][/docs/id-json.md] goes into much more detail.
+The json file is one you'll create by hand to create a machine readable record of the archive. This file contains vital data, including the url that was archived, and date of archiving. the [id.json readme](docs/id-json.md) goes into much more detail.
 
 ### 4a. Identify Data Links & WGET loop with sleep
 If you encounter a page that links to lots of data (for example a "downloads" page), this approach may well work. It's important to know Only use this approach when you encounter *data*, for example pdf's, .zip archives, .csv datasets, etc.
