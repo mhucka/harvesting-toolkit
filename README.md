@@ -22,7 +22,7 @@ Before doing anything, take a minute to understand what you're looking at. It's 
 Generally, any url that returns standard HTML, links to more [HTML mimetype pages][https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types], and contains little-to-no non-html content, it's crawlable. "View source" from your browser of choice will help see what the crawler itself is seeing. If in fact the data can be crawled, make a note as such in the Google sheet, remove your name from the "checkout" column, notify the seeding / crawling team & they will make sure the link is crawled, and move on to another url.
 
 #### Some things to think about while reviewing a url
-* Does this page use javascript to render it's content? Crawlers generally cannot parse dynamically-generated content.
+* Does this page use javascript to render its content? Crawlers generally cannot parse dynamically-generated content.
 * Does this url contain links to non-html content? (For example, zip files, pdfs, excel files, etc...)
 * Is this url some sort of interface for a large database or service? (For example, an interactive map, api gateway, etc.)
 * Does this url contain instructions for connecting to a server, database, or other special source of data?
